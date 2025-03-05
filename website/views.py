@@ -18,7 +18,7 @@ def home(request):
             messages.success(request,"You have been locked in")
             return redirect('home')
         else:
-            messages.success(request,"There is something eerror when looging in")
+            messages.success(request,"There is something error when logging in")
             return redirect('home')
     else:
         
@@ -49,7 +49,7 @@ def register(request):
     else:
         form = SignUpForm()
         return render(request,'register.html',{'form':form})
-    return render(request,'register.html',{'form':form})
+    
 
 
 

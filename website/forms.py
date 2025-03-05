@@ -30,9 +30,7 @@ class SignUpForm(UserCreationForm):
         self.fields['password2'].help_text = '<span class="form-text text-muted"><small>Enter the same password as before, for verification.</small></span>'	
 
 #CREATE ADD RECORD FORM
-class AddRecordForm(forms.ModelForm):
-    from django import forms
-from .models import Record
+
 
 class AddRecordForm(forms.ModelForm):
     first_name = forms.CharField(widget=forms.TextInput(attrs={"placeholder": "First Name", "class": "form-control"}), label="")
